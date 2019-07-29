@@ -1,0 +1,27 @@
+<div fxFlex fxLayout="column" fxLayoutGap="10"> 
+
+    <div fxLayout="row wrap">
+    <!-- <mat-grid-list cols="4" rowHeight="600px">
+        <mat-grid-tile
+            
+            [colspan]="2"
+            [rowspan]="1"
+            [style.background]="red">    -->
+            <div class="list"
+            *ngFor="let country of countriesList"
+            fxFlex="25"
+            fxFlex.md="33"
+            fxFlex.sm="50"
+            fxFlex.xs="100"
+            fxLayout="column"
+            style="padding: 5px;">
+    
+        <fav-thumbnail [country]="country" [isFavourite]="isFavourite" 
+        (deleted)="deleteFromFavorites($event)" (added)="addToFavlist($event)"></fav-thumbnail>         
+    </div>
+        <!-- </mat-grid-tile>
+      </mat-grid-list> -->
+
+    </div>
+    
+</div>

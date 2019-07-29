@@ -1,0 +1,17 @@
+<div class="flex-container" *ngIf="!(this.countriesList.length==0)">
+    <form class="example-form">
+      <mat-form-field>
+        <input matInput type="text" id="search-button" #box (keyUp.enter)="onEnter(box.value)">
+        <mat-placeholder>Search</mat-placeholder>
+      </mat-form-field>
+    </form>
+</div>
+
+<div class="blank-search" *ngIf="(this.countriesList.length==0)">
+  <span class="search-text">SEARCH COUNTRY</span>
+  <div class="searchbox">
+    <input matInput type="text" id="search-button-input" #box (keyUp.enter)="onEnter(box.value)" placeholder="Search By Name">
+    
+  </div>
+</div>
+<fav-container [countriesList]="countriesList"></fav-container>

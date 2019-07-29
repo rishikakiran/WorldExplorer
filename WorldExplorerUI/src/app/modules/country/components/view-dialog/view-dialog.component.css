@@ -1,0 +1,92 @@
+.card-image{
+    width: 80%;
+    height:50%;
+    margin-left: 10%;
+}
+
+.countryname{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    font-weight: 800;
+    color: #3f51b5
+}
+
+.countrydata{
+    margin-left: 15%;
+    width:70%;
+    float: left;
+}
+
+.table-header{
+    font-weight: 600;
+}
+
+.closeDialog{
+    float: right;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    min-width: 36px;
+    line-height: 36px;
+    /* padding: 0 16px; */
+    border-radius: 4px;
+    overflow: visible;
+    transform: translate3d(0,0,0);
+    transition: background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    background-color:  #f44336;;
+    color: #fff;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    
+    border-radius: 50%;
+}
+
+.dialogButtons{
+    width:40%;
+    margin:5%;
+    float: right;
+}
+
+.content{
+    margin :0px;
+}
+
+@media screen and (max-width: 992px) {
+    .card-image{
+        width: 80%;
+    height:50%;
+    margin-left: 10%;
+    }
+  }
+  
+  /* On screens that are 600px or less, set the background color to olive */
+  @media screen and (max-width: 600px) {
+    .card-image{
+        width: 80%;
+        height:30%;
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .card-image{
+        width: 90%;
+        height:50%;
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .card-image{
+        width: 90%;
+        height:50%;
+        margin-left: 5%;
+    }
+}

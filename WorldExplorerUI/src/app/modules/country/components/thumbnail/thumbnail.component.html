@@ -1,0 +1,16 @@
+<mat-card fxFlex class="country-card" >
+    <mat-card-header>
+      <!-- <div mat-card-avatar class="country-header-image"></div> -->
+      <mat-card-title>{{country.name}}</mat-card-title>
+      <mat-card-subtitle>{{country.region}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image class="card-image" [src]="country.flag" alt="Photo of a Shiba Inu" (click)="viewCountry('view')">
+    <mat-card-content>
+      
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button id="addToFav" class="addButton" *ngIf="!isFavourite" (click)="addToFavourites()">Add To Favourites</button>
+      <button mat-raised-button class="addButton" *ngIf="isFavourite" (click)="deleteFromFavourites()">Remove</button>
+      <button mat-raised-button class="addButton" *ngIf="isFavourite" (click)="updateWatchList('update')">Update</button>
+    </mat-card-actions>
+  </mat-card>

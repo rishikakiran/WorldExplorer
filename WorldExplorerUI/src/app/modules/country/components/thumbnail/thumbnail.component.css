@@ -1,0 +1,79 @@
+.card-image{
+    padding: 0%;
+    height:65%;
+    margin: 0%;
+    margin-left:-5%;
+    cursor: pointer;
+}
+
+.addButton{
+    float: right;
+    box-sizing: border-box;
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    border-radius: 4px;
+    overflow: visible;
+    transform: translate3d(0,0,0);
+    transition: background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    background-color: #3f51b5;
+    color: #fff;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    /* width: 40%; */
+    height: 5%;;
+    margin-right: 5%;
+    padding:5px;
+    font-size: 15px;
+}
+
+
+.country-card{
+    margin:20px;
+    padding:5%;;
+    min-height: 450px;
+    /* width:500px; */
+    overflow: hidden;
+}
+
+@media screen and (max-width: 450px) {
+    .country-card{
+        width: auto;
+        height:auto;
+        overflow: hidden;
+        
+    }
+}
+/* @media screen and (max-width: 992px) {
+    .country-card{
+        height: 400px;
+        /* width:500px; 
+        overflow: hidden;
+    }
+  }
+  
+  /* On screens that are 600px or less, set the background color to olive 
+  @media screen and (max-width: 600px) {
+    .country-card{
+        height: 400px;
+        /* width:500px; 
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .country-card{
+        height: 400px;
+        /* width:500px; 
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .country-card{
+        height: 400px;
+        /* width:500px; 
+        overflow: hidden;
+    }
+} */

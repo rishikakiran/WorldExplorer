@@ -1,0 +1,50 @@
+<div class="login-container">
+  <mat-card class="login-card">
+    <mat-card-header>
+      <mat-card-title class="cardTitle">Login User</mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <div *ngIf="isInvalidUser">
+        <p class="invalid-message">*Invalid Login Credentials</p>
+      </div>
+      <form class="login-form" #loginForm="ngForm" (ngSubmit)="loginUser()">
+        <div class="login-container">
+          <div class="row">
+            <mat-form-field class="login-input">
+              <input class="inputId" id="userId" matInput #userId="ngModel" [(ngModel)]="newUser.userId" placeholder="User Id" name="userId"
+                minlength="5" maxlength="10" required #userId="ngModel">
+            </mat-form-field>
+            <mat-form-field class="login-input">
+              <input class="inputPass" type="password" matInput id="password" #password="ngModel" [(ngModel)]="newUser.password" placeholder="Password"
+                name="password" required>
+            </mat-form-field>
+
+            <button class="loginMe login-buttons" mat-raised-button color="primary" type="submit">Login</button>
+            <input type="button" class="registerMe login-buttons" mat-raised-button color="primary" (click)="goToRegister()" value="Register">
+
+          </div>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<!-- <div class="login-container">
+    <div class="row">
+        <h3>Login User</h3>
+    </div>
+  <form class="login-form">
+    <mat-form-field class="login-full-width">
+      <input matInput placeholder="User Id">
+    </mat-form-field>
+  
+    <mat-form-field class="login-full-width">
+      <input matInput type="password" placeholder="password">
+    </mat-form-field>
+    <div class="row">
+        <button class="login-form-button" mat-raised-button color="primary" type="submit">Login</button>
+        <button class="login-form-button" mat-raised-button color="primary" [routerLink]="['/register']">Register</button>
+      </div>
+  </form>
+</div> -->

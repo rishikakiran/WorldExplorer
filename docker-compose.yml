@@ -1,0 +1,45 @@
+version: '2.2'
+services:
+ user-app:
+  image: user-app
+  build: userservice/
+  restart: always
+  network_mode: host
+  ports:
+   - 2213:2213
+  expose: 
+   - 2213
+  depends_on:
+  - country-mysql
+  
+   
+ country-app:
+  image: country-app
+  build: favouriteservice/
+  restart: always
+  network_mode: host
+  ports:
+   - 2212:2212
+  expose:
+  - 2212
+  depends_on:
+  - country-mysql
+ 
+ country-mysql:
+  image: mysql:5.5
+  ports:
+   - 3306:3306
+  network_mode: host
+  environment:
+   MYSQL_ROOT_PASSWORD: root
+   MYSQL_DATABASE: countrydb
+   MYSQL_USER: app_root
+   MYSQL_PASSWORD: root123
+   
+ angular:
+  image: angular-app
+  build: WorldExplorerUI/
+  network_mode: host
+  container_name: angular-docker
+  ports:
+   - 4200:4200

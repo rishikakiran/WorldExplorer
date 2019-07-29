@@ -1,0 +1,49 @@
+<div class="dialogTitle">
+    <h1 mat-dialog-title>
+        <span class="countryname">{{data.obj.name | uppercase}}</span>
+        <input type="button" mat-raised-button class="closeDialog" (click)="onNoClick()" color="warn" value="X">
+    </h1>
+    <!-- <div mat-dialog-title>
+  <h1  class="dialogTitle">{{data.obj.name}}</h1>
+  <input type="button" mat-dialog-title class="closeDialog" (click)="onNoClick()" color="warn" value="X">
+</div> -->
+    <div mat-dialog-content class="content">
+        <img mat-card-image class="card-image" [src]="country.flag" alt="Flag of {{data.obj.name}}" (click)="viewCountry('view')">
+       
+        <table class="countrydata">
+            <tr>
+                <td class="table-header">Capital</td>
+                <td>{{country.capital}}</td>
+            </tr>
+            <tr>
+                    <td class="table-header">Country Codes</td>
+                    <td>{{country.alpha2Code}} {{country.alpha3Code}}</td>
+            </tr>
+            <tr>
+                    <td class="table-header">Region</td>
+                    <td>{{country.region}}</td>
+            </tr>
+            <tr>
+                    <td class="table-header">Sub-region</td>
+                    <td>{{country.subregion}}</td>
+            </tr>
+            <tr>
+                    <td class="table-header">Population</td>
+                    <td>{{country.population}}</td>
+            </tr>
+            <tr>
+                    <td class="table-header">Area</td>
+                    <td>{{country.area}}</td>
+            </tr>
+            <tr>
+                    <td class="table-header">Native Name</td>
+                    <td>{{country.nativeName}}</td>
+            </tr>
+            <tr>
+                    <td class="table-header">Major Language</td>
+                    <td>{{country.languages[0].name}}</td>
+            </tr>
+        </table>
+        <mat-divider></mat-divider>
+    </div>
+</div>

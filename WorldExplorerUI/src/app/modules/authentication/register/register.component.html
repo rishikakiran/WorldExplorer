@@ -1,0 +1,41 @@
+<div class="register-container">
+  <mat-card class="register-card">
+    <mat-card-header>
+      <mat-card-title class="cardTitle">Register New User</mat-card-title>
+      
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <form class="register-form" #registerForm="ngForm" (ngSubmit)="registerUser()">
+        <div class="register-container">
+          <div class="row">
+            <mat-form-field class="register-input">
+              <input class="firstName" id="firstName" matInput #userId="ngModel" [(ngModel)]="newUser.firstName" placeholder="First Name"
+                name="firstName" minlength="5" maxlength="10" required #firstName="ngModel">
+            </mat-form-field>
+            
+            <mat-form-field class="register-input">
+              <input class="lastName" matInput id="lastName" #password="ngModel" [(ngModel)]="newUser.lastName" placeholder="Last Name"
+                #lastName="ngModel" name="lastName" required>
+            </mat-form-field>
+            <mat-form-field class="register-input">
+              <input class="inputId" id="userId" matInput #userId="ngModel" [(ngModel)]="newUser.userId" placeholder="User Id" name="userId"
+                minlength="5" maxlength="10" required #userId="ngModel">
+            </mat-form-field>
+            <mat-form-field class="register-input">
+              <input class="inputPass" type="password" matInput id="password" #password="ngModel" [(ngModel)]="newUser.password" placeholder="Password"
+                name="password" required #password="ngModel">
+            </mat-form-field>
+
+            <a [routerLink]="['/login']">Already a registered User? Go To LOGIN</a>
+            <input type="button" class="register-buttons clearForm" mat-raised-button color="primary" (click)="clearForm()" value="Clear Form">
+            <button class="registerMe register-buttons" mat-raised-button color="primary" type="submit">Register</button>
+          </div>
+          <div class="row">
+            
+          </div>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
