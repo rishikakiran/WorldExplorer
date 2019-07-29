@@ -1,6 +1,6 @@
 # WorldExplorer
-## Problem Statement
-1. Build a system to search for country and list matching countries, show details of a selected country and bookmark favourite country.
+## Problem Description
+1. To build a system to search for country and list matching countries, show details of a selected country and bookmark favourite country. See screenshots in `documentation.docx`.
  
 
 ## To Run the application
