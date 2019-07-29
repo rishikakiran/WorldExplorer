@@ -5,7 +5,7 @@
 
 ## To Run the application
 
-1. Clone the project into your system using `git clone https://gitlab-cts.stackroute.in/cts-23_assignments/Rishika.Kiran-worldexplorer-java-boilerplate.git`.
+1. Clone the project into your system using `https://github.com/rishikakiran/WorldExplorer.git`.
 2. Inside the project folder, open git-bash in windows or terminal in ubuntu.
  
 
